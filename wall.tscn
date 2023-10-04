@@ -1,0 +1,25 @@
+[gd_scene load_steps=4 format=3 uid="uid://dnd761a3iwgjj"]
+
+[ext_resource type="Texture2D" uid="uid://btoes0xmit78x" path="res://Sprites/Prototype wall.png" id="1_i2efa"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hwqx0"]
+size = Vector2(11.7526, 0.768456)
+
+[sub_resource type="QuadMesh" id="QuadMesh_aqpyq"]
+
+[node name="wall" type="StaticBody2D"]
+position = Vector2(-533, 87)
+scale = Vector2(79.7942, 81.2897)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0.00928783, 0)
+rotation = -3.14159
+scale = Vector2(0.0835433, -1.28824)
+shape = SubResource("RectangleShape2D_hwqx0")
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="."]
+modulate = Color(1, 0.129412, 1, 1)
+position = Vector2(-0.0125322, -0.0123017)
+scale = Vector2(1.00084, 1.02181)
+mesh = SubResource("QuadMesh_aqpyq")
+texture = ExtResource("1_i2efa")
