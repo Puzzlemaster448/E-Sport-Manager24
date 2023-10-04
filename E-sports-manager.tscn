@@ -1,0 +1,68 @@
+[gd_scene load_steps=8 format=3 uid="uid://bp8u0564usuwr"]
+
+[ext_resource type="PackedScene" uid="uid://dnd761a3iwgjj" path="res://wall.tscn" id="1_0mejl"]
+[ext_resource type="Script" path="res://Player.gd" id="1_lxvyb"]
+[ext_resource type="Texture2D" uid="uid://cvpohuer5bhyd" path="res://Sprites/Prototype_player.png" id="2_sl7tm"]
+[ext_resource type="Texture2D" uid="uid://btoes0xmit78x" path="res://Sprites/Prototype wall.png" id="4_yf4er"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_h6ab8"]
+size = Vector2(31.2679, 30.1316)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vynjd"]
+
+[sub_resource type="QuadMesh" id="QuadMesh_pcq3d"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="Player" type="CharacterBody2D" parent="."]
+scale = Vector2(1.20118, 1.57841)
+script = ExtResource("1_lxvyb")
+
+[node name="PlayerSprite" type="Sprite2D" parent="Player"]
+scale = Vector2(0.988845, 0.990035)
+texture = ExtResource("2_sl7tm")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
+position = Vector2(-2.77881e-06, -2.64337e-07)
+scale = Vector2(1.01175, 1.0513)
+shape = SubResource("RectangleShape2D_h6ab8")
+
+[node name="Room" type="Node2D" parent="."]
+
+[node name="Wallleft" parent="Room" instance=ExtResource("1_0mejl")]
+position = Vector2(-553, 2)
+rotation = 3.14159
+scale = Vector2(46.2897, -641.693)
+
+[node name="Walltop" parent="Room" instance=ExtResource("1_0mejl")]
+position = Vector2(20, -302)
+scale = Vector2(1120.23, -42.5064)
+
+[node name="Wallbottom" parent="Room" instance=ExtResource("1_0mejl")]
+position = Vector2(23, 305)
+scale = Vector2(1107.56, -42.5064)
+
+[node name="Wallright2" parent="Room" instance=ExtResource("1_0mejl")]
+position = Vector2(557, 6)
+rotation = 3.14159
+scale = Vector2(46.2897, -641.693)
+
+[node name="Halfwall" parent="Room" instance=ExtResource("1_0mejl")]
+position = Vector2(-231, -2)
+rotation = 3.14159
+scale = Vector2(52.3939, 381.14)
+
+[node name="Fridge" type="StaticBody2D" parent="Room"]
+position = Vector2(-496, -98)
+scale = Vector2(3.47082, 3.45368)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Room/Fridge"]
+scale = Vector2(0.992194, 1)
+shape = SubResource("RectangleShape2D_vynjd")
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="Room/Fridge"]
+scale = Vector2(19.856, 20.1509)
+mesh = SubResource("QuadMesh_pcq3d")
+texture = ExtResource("4_yf4er")
