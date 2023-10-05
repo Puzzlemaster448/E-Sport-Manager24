@@ -66,3 +66,8 @@ shape = SubResource("RectangleShape2D_vynjd")
 scale = Vector2(19.856, 20.1509)
 mesh = SubResource("QuadMesh_pcq3d")
 texture = ExtResource("4_yf4er")
+
+[node name="Halfwall" parent="." instance=ExtResource("1_0mejl")]
+position = Vector2(195, 37)
+rotation = 4.65155
+scale = Vector2(52.3939, 381.14)
