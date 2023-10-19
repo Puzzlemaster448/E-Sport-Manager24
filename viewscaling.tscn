@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://ba81nti8imkk7"]
+
+[ext_resource type="PackedScene" uid="uid://7hde7ptydlnv" path="res://Control.tscn" id="1_gd830"]
+[ext_resource type="PackedScene" uid="uid://bp8u0564usuwr" path="res://E-sports-manager.tscn" id="2_icyaw"]
+
+[node name="Control" instance=ExtResource("1_gd830")]
+
+[node name="SV" parent="SVC" index="0"]
+snap_2d_vertices_to_pixel = true
+
+[node name="Node2D" parent="SVC/SV" index="0" instance=ExtResource("2_icyaw")]

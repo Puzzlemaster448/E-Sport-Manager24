@@ -5,6 +5,7 @@ const maxspeed = 300
 const acceleration = maxspeed * 5
 const friction = maxspeed * 5
 
+
 func _physics_process(delta):
 	#sets a the built in variable Vector2 to change state when button is pressed
 	var input_vector = Vector2.ZERO

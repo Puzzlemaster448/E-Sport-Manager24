@@ -37,25 +37,26 @@ rotation = 3.14159
 scale = Vector2(46.2897, -641.693)
 
 [node name="Walltop" parent="Room" instance=ExtResource("1_0mejl")]
-position = Vector2(20, -302)
+position = Vector2(43, -140)
 scale = Vector2(1120.23, -42.5064)
 
 [node name="Wallbottom" parent="Room" instance=ExtResource("1_0mejl")]
-position = Vector2(23, 305)
+position = Vector2(45, 125)
 scale = Vector2(1107.56, -42.5064)
 
 [node name="Wallright2" parent="Room" instance=ExtResource("1_0mejl")]
-position = Vector2(557, 6)
+position = Vector2(174, 65)
 rotation = 3.14159
 scale = Vector2(46.2897, -641.693)
 
 [node name="Halfwall" parent="Room" instance=ExtResource("1_0mejl")]
-position = Vector2(-231, -2)
+texture_filter = 1
+position = Vector2(-128, 23)
 rotation = 3.14159
 scale = Vector2(52.3939, 381.14)
 
 [node name="Fridge" type="StaticBody2D" parent="Room"]
-position = Vector2(-496, -98)
+position = Vector2(-128, -96)
 scale = Vector2(3.47082, 3.45368)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Room/Fridge"]
@@ -68,6 +69,6 @@ mesh = SubResource("QuadMesh_pcq3d")
 texture = ExtResource("4_yf4er")
 
 [node name="Halfwall" parent="." instance=ExtResource("1_0mejl")]
-position = Vector2(195, 37)
-rotation = 4.65155
+position = Vector2(95, 86)
+rotation = 4.20094
 scale = Vector2(52.3939, 381.14)
